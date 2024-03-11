@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container" style="margin: 0px 50px; padding-right: 0px;">
+        <h1 class="mb-3 mt-3 text-danger">Dynamic Table</h1>
+        <div class="row">
+            <div class="col-lg-4">
+                <form id="studentForm" class="needs-validation" novalidate>
+
+<!-- --------------------------------------------FIRST NAME---------------------------------------------------------------                      -->
+                    <div class="col mb-3">
+                        <label for="firstName" class="form-label"> Student First Name</label>
+                        <input type="text" class="form-control" id="firstName" placeholder="First Name" aria-label="Username" aria-describedby="addon-wrapping" pattern="[A-Za-z]+" title="Contains only Alphabets" required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                        <div class="invalid-feedback">
+                            Enter your First Name!!
+                        </div>
+                    </div>
+
+<!-- --------------------------------------------------LAST NAME------------------------------------------------------------------------  -->
+
+                    <div class="mb-3">
+                        <label for="lastName" class="form-label"> Student Last Name</label>
+                        <input type="text" class="form-control" id="lastName" placeholder="Last Name" aria-label="Username" aria-describedby="addon-wrapping" pattern="[A-Za-z]+" title="Contains only Alphabets" required>
+                        <div class="valid-feedback">
+                            Looks good!
+                          </div>
+                          <div class="invalid-feedback">
+                            Enter your Last Name!!
+                        </div>
+                    </div>
+
+<!-- --------------------------------------------------------UID---------------------------------------------------------------  -->
+
+                    <div class="mb-3">
+                        <label for="SID" class="form-label"> Student UID</label>
+                        <input type="text" class="form-control" id="SID" placeholder="UID" aria-label="Username" aria-describedby="addon-wrapping" required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                        <div class="invalid-feedback">
+                            Enter your UID!!
+                        </div>
+                    </div>
+
+<!-- --------------------------------------------------EMAIL-------------------------------------------------------------------  -->
+
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">Email Address</label>
+                        <input type="email" class="form-control" placeholder="Email" id="exampleInputEmail1" aria-describedby="emailHelp" required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                        <div class="invalid-feedback">
+                            Enter your Email!!
+                        </div>
+                    </div>
+
+<!-- --------------------------------------------------GENDER----------------------------------------------------------------  -->
+
+                    <h4>Gender</h4>
+                
+
+                    <div class="row">
+                        <div class="col-auto">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="gender" id="male" value="Male" required>
+                                <label class="form-check-label" for="male">Male</label>
+                                <div class="valid-feedback">Looks good!</div>
+                                <div class="invalid-feedback">Select your Gender!</div>
+                            </div>
+                        </div>
+                    
+                        <div class="col-auto">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="gender" id="female" value="Female" required>
+                                <label class="form-check-label" for="female">Female</label>
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+
+<!-- -------------------------------------------------------DOB------------------------------------------------------------  -->
+
+                    <h3> Date Of Birth </h3>
+
+                    <div class="row">
+                        <div class="col">
+                            <label for="day" class="form-label">Date:</label>
+                            <select class="form-select" id="day" name="day" required></select>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                            <div class="invalid-feedback">
+                                Choose your DOB!!
+                            </div>
+                        </div>
+                    
+                        <div class="col">
+                            <label for="month" class="form-label">Month:</label>
+                            <select class="form-select" id="month" name="month" required></select>
+                        </div>
+                    
+                        <div class="col">
+                            <label for="year" class="form-label">Year:</label>
+                            <select class="form-select" id="year" name="year" required></select>
+                        </div>
+                    </div>
+                    
+                        
+<!-- ------------------------------------------------CONTACT NUMBER----------------------------------------------------------  -->
+
+                    Contact Number
+                    <div class="mb-3">
+                        <label for="contactNumber" class="form-label"></label>
+                        <input type="text" class="form-control" id="contactNumber" maxlength="10" pattern="[789][0-9]*" title="Please enter proper value" required>
+                        <div class="valid-feedback">
+                            Looks good!
+                        </div>
+                        <div class="invalid-feedback">
+                            Enter your Contact Number!!
+                        </div>
+                    </div>
+
+<!-- -----------------------------------------------BUTTON-----------------------------------------------------------------------  -->
+
+                    <button type="submit" class="btn btn-primary mt-3">Submit</button>
+                </form>
+            </div>
+
+<!-- ----------------------------------------------RESUL TABLE--------------------------------------------------------------  -->
+
+            <div class="col-lg-8" style="padding-left: 100px;">
+                <table class="table table-warning">
+                    <thead class="table-danger">
+                        <tr>
+                            <th scope="col">S.NO</th>
+                            <th scope="col">NAME</th>
+                            <th scope="col">UID</th>
+                            <th scope="col">EMAIL</th>
+                            <th scope="col">GENDER</th>
+                            <th scope="col">D.O.B</th>
+                            <th scope="col">CONTACT</th>
+                        </tr>
+                    </thead>
+                    <tbody id="studentTableBody">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="form1.js"></script>
+
+
+
+</body>
+
+</html>
